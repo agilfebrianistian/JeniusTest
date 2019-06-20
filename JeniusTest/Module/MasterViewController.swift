@@ -16,7 +16,14 @@ class MasterViewController: UITableViewController {
     }()
     
     private var contactsResponseData: ContactsResponseData?
+    
+    var itemCounts : Int = 0
+    var isSearching : Bool = false
+
     var contacts : [ContactResponse] = [ContactResponse]()
+    var filteredData : [ContactResponse] = [ContactResponse]()
+
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let _refreshControl = UIRefreshControl.init()
     
@@ -48,16 +55,29 @@ extension MasterViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        if isFiltering() {
+            itemCounts = filteredData.count
+        }
+        else{
+            itemCounts = contacts.count
+        }
+        return itemCounts
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "ContactCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactCell
-        let model = contacts[indexPath.row]
         
-        cell.setup(model)
+        var model : ContactResponse?
+        
+        if isFiltering() {
+            model = filteredData[indexPath.row]
+        } else {
+            model = contacts[indexPath.row]
+        }
+        
+        cell.setup(model!)
         
         return cell
     }
@@ -65,8 +85,15 @@ extension MasterViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
 
-        let model = contacts[indexPath.row]
-        contactID = model.id
+        var model : ContactResponse?
+        
+        if isFiltering() {
+            model = filteredData[indexPath.row]
+        } else {
+            model = contacts[indexPath.row]
+        }
+
+        contactID = model?.id
         
         self.performSegue(withIdentifier: "toDetailViewController", sender: nil)
         
@@ -80,7 +107,32 @@ extension MasterViewController {
             controller.contactID = self.contactID
         }
     }
+    
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        let searchBarScopeIsFiltering = searchBar.selectedScopeButtonIndex != 0
+        return !searchBarIsEmpty() || searchBarScopeIsFiltering
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredData = contacts.filter({( model : ContactResponse) -> Bool in
+            return model.firstName?.lowercased().contains(searchText.lowercased()) ?? true || model.lastName?.lowercased().contains(searchText.lowercased()) ?? true
+        })
+        tableView.reloadData()
+    }
 }
+
+extension MasterViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterContentForSearchText(searchBar.text!)
+        self.isSearching = isFiltering()
+    }
+}
+
 
 extension MasterViewController: ContactDelegate {
     func didSuccessUpdateContact(response: ContactSuccessResponseData) {}
@@ -111,10 +163,5 @@ extension MasterViewController: ContactDelegate {
     func didFailedGetContact(response: NetworkError) {}
 
 }
-
-
-
-
-
 
 

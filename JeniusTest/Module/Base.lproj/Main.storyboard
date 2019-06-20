@@ -148,9 +148,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="6AY-cl-JdA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="cYk-bs-KKU" id="D1T-ho-gSw"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="87" id="aQS-IR-vgE" customClass="ContactCell" customModule="JeniusTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aQS-IR-vgE" id="ibd-YX-XVi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="86.5"/>
@@ -208,6 +216,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="6AY-cl-JdA" id="Gcz-f2-ZKG"/>
                         <segue destination="fFd-hd-Mal" kind="show" identifier="toDetailViewController" id="ipr-8R-vZ4"/>
                     </connections>
                 </tableViewController>
@@ -315,6 +324,6 @@
         <image name="placeholder-avatar" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P3y-CP-QZW"/>
+        <segue reference="Dk8-KO-Jc3"/>
     </inferredMetricsTieBreakers>
 </document>
