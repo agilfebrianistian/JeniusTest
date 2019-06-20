@@ -22,7 +22,8 @@ jenius test
 3. Compile the code
 
 ## Dependency
-- [x] [Moya 8.0.5](https://github.com/Alamofire/Alamofire)
-- [x] [CircularSpinner 1.2.0](https://github.com/taglia3/CircularSpinner)
-- [x] [SwiftyJSON 3.1.4](https://github.com/SwiftyJSON/SwiftyJSON)
-- [x] [SCLAlertView 0.7.0](https://github.com/vikmeup/SCLAlertView-Swift)
+- [x] [Moya](https://github.com/Moya/Moya)
+- [x] [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
+- [x] [SCLAlertView](https://github.com/vikmeup/SCLAlertView-Swift)
+- [x] [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+- [x] [PromiseKit](https://github.com/mxcl/PromiseKit)
