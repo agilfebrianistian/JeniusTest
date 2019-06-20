@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.8.2)
-  - CarbonKit (2.2.2)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -17,7 +16,6 @@ PODS:
   - SDWebImage/Core (4.4.6)
 
 DEPENDENCIES:
-  - CarbonKit (= 2.2.2)
   - Moya (= 12.0.1)
   - NVActivityIndicatorView (~> 4.6.1)
   - PromiseKit/CorePromise (~> 6.0)
@@ -27,7 +25,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - CarbonKit
     - Moya
     - NVActivityIndicatorView
     - PromiseKit
@@ -37,7 +34,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  CarbonKit: 0dec4738fa489b4c043a5f850c27fd0dbefb57cc
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
@@ -45,6 +41,6 @@ SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 58ccc1bb6da2c961b0b466a65e630dff508179a0
+PODFILE CHECKSUM: f0cedc8dc8545d75cabc57770ff15ab581a6bb68
 
 COCOAPODS: 1.6.0.beta.2

@@ -7,7 +7,6 @@ target 'JeniusTest' do
   
   pod 'Moya', '12.0.1'
   pod 'SCLAlertView', '0.8'
-  pod 'CarbonKit', '2.2.2'
   pod 'PromiseKit/CorePromise', '~> 6.0'
   pod 'NVActivityIndicatorView', '~> 4.6.1'
   pod 'SDWebImage'
