@@ -57,7 +57,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xq-dd-8xs">
-                                <rect key="frame" x="87" y="828" width="240" height="34"/>
+                                <rect key="frame" x="87" y="800" width="240" height="34"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.4823529412" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="save"/>
                                 <connections>
@@ -114,7 +114,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Xq-dd-8xs" secondAttribute="trailing" constant="87" id="15Q-WY-nVw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Xq-dd-8xs" secondAttribute="bottom" id="9Ll-C5-S82"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Xq-dd-8xs" secondAttribute="bottom" constant="28" id="9Ll-C5-S82"/>
                             <constraint firstItem="SQo-NF-Qyb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="G5o-t7-Wq0"/>
                             <constraint firstItem="3Xq-dd-8xs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Lch-Gz-jt7"/>
                             <constraint firstItem="lDB-TS-g25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Q16-8D-bF0"/>
@@ -221,6 +221,10 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWP-eJ-5Xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Tc7-p0-k9G">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="463.768115942029" y="251.78571428571428"/>
         </scene>
@@ -268,7 +272,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-cy-bnL">
-                                <rect key="frame" x="87" y="786" width="240" height="76"/>
+                                <rect key="frame" x="87" y="760" width="240" height="76"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J82-ha-uGd">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
@@ -303,7 +307,7 @@
                             <constraint firstItem="fDe-7O-JXJ" firstAttribute="top" secondItem="GFm-ML-lk5" secondAttribute="top" constant="13" id="q60-ms-EtA"/>
                             <constraint firstItem="GFm-ML-lk5" firstAttribute="trailing" secondItem="bW6-cy-bnL" secondAttribute="trailing" constant="87" id="ud6-7Q-iTx"/>
                             <constraint firstItem="GFm-ML-lk5" firstAttribute="trailing" secondItem="fDe-7O-JXJ" secondAttribute="trailing" constant="87" id="uuD-XF-rSJ"/>
-                            <constraint firstItem="GFm-ML-lk5" firstAttribute="bottom" secondItem="bW6-cy-bnL" secondAttribute="bottom" id="xmH-fS-IDW"/>
+                            <constraint firstItem="GFm-ML-lk5" firstAttribute="bottom" secondItem="bW6-cy-bnL" secondAttribute="bottom" constant="26" id="xmH-fS-IDW"/>
                             <constraint firstItem="c3C-uB-ebC" firstAttribute="top" secondItem="fDe-7O-JXJ" secondAttribute="bottom" constant="28" id="zsH-qD-t2h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GFm-ML-lk5"/>
@@ -324,6 +328,6 @@
         <image name="placeholder-avatar" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dk8-KO-Jc3"/>
+        <segue reference="P3y-CP-QZW"/>
     </inferredMetricsTieBreakers>
 </document>
